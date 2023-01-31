@@ -12,30 +12,29 @@
     <div id="main">
         <div id="calculator">
             <div id="screen">
-                <div id="calc">18-1</div>
-                <div id="result">17</div>
+                <div id="calc"></div>
             </div>
             <div id="keyboard">
-                <div class="button functionButton"><span>DEL</span></div>
-                <div class="button emptyButton"><span> </span></div>
-                <div class="button emptyButton"><span> </span></div>
-                <div class="button operatorButton"><span>/</span></div>
-                <div class="button numberButton"><span>7</span></div>
-                <div class="button numberButton"><span>8</span></div>
-                <div class="button numberButton"><span>9</span></div>
-                <div class="button operatorButton"><span>x</span></div>
-                <div class="button numberButton"><span>4</span></div>
-                <div class="button numberButton"><span>5</span></div>
-                <div class="button numberButton"><span>6</span></div>
-                <div class="button operatorButton"><span>-</span></div>
-                <div class="button numberButton"><span>1</span></div>
-                <div class="button numberButton"><span>2</span></div>
-                <div class="button numberButton"><span>3</span></div>
-                <div class="button operatorButton"><span>+</span></div>
-                <div class="button functionButton"><span>ON</span></div>
-                <div class="button numberButton"><span>0</span></div>
-                <div class="button numberButton"><span>.</span></div>
-                <div class="button operatorButton"><span>ENTER</span></div>
+                <div class="button functionButton" onclick="buttonPressed('DEL')"><span>DEL</span></div>
+                <div class="button emptyButton"></div>
+                <div class="button emptyButton"></div>
+                <div class="button operatorButton" onclick="buttonPressed('/')"><span>/</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('7')"><span>7</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('8')"><span>8</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('9')"><span>9</span></div>
+                <div class="button operatorButton" onclick="buttonPressed('x')"><span>x</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('4')"><span>4</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('5')"><span>5</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('6')"><span>6</span></div>
+                <div class="button operatorButton" onclick="buttonPressed('-')"><span>-</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('1')"><span>1</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('2')"><span>2</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('3')"><span>3</span></div>
+                <div class="button operatorButton" onclick="buttonPressed('+')"><span>+</span></div>
+                <div class="button functionButton" onclick="buttonPressed('ON')"><span>ON</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('0')"><span>0</span></div>
+                <div class="button numberButton"   onclick="buttonPressed('.')"><span>.</span></div>
+                <div class="button operatorButton" onclick="buttonPressed('ENTER')"><span>ENTER</span></div>
             </div>
         </div>
     </div>
