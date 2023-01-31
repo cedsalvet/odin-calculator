@@ -1,6 +1,4 @@
-console.log("66".toString(16))
-console.log("76".toString(16))
-console.log("88".toString(16))
+
 
 
 

@@ -3,53 +3,77 @@
     margin: 0;
     padding: 0;
     overflow: hidden;
-    font-size: 12pt;
+    font-size: 10pt;
+    font-weight: normal;
     font-family: Verdana, Tahoma, sans-serif
 }
-
 #main {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background-color: black;
-    display: flex;
+    background-color: #555;
+    display:flex;
+    align-items: center;
+    justify-content: center;
 }
-#calculator {
-    width: 400px;
-    height: 260px;
+#calculator{
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(0,0,0,0.50),
+        2px 4px 4px rgba(0,0,0,0.25),
+        4px 2px 5px rgba(0,0,0,0.50);
+}
+#screen{
+    height: 140px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: rgb(66, 76, 88);
+}
+#keyboard {
+    height: 200px;
     padding: 20px;
     background-color: rgb(66, 76, 88);
-    margin: auto;
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 10px;
     grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-span.button{
+div.button{
     display: inline-block;
     font-size: 1em;
-    font-weight: bold;
-    text-align: center;
-    padding-top: 4px;
-    border-radius: 10px;
-    box-shadow: 4px 6px 5px rgba(0,0,0,0.25),
-    6px 4px 7px rgba(0,0,0,0.50)
+    border-radius: 4px;
+    box-shadow: inset 2px 2px rgba(255,255,255,0.20),
+        2px 2px rgba(0,0,0,0.50),
+        2px 4px 4px rgba(0,0,0,0.25),
+        4px 2px 5px rgba(0,0,0,0.50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
 }
-
-span.enterButton{
-   
-    height: 100%;
-    grid-column-start: 4;
-    grid-row-start: 2;
-    grid-row-end: 6;
+div.button:hover{
+    box-shadow: inset 1px 1px rgba(255,255,255,0.20),
+        1px 1px rgba(0,0,0,0.50),
+        2px 4px 4px rgba(0,0,0,0.25),
+        4px 2px 5px rgba(0,0,0,0.50);
+    cursor: pointer;
 }
-
-
-.numberButton {
+div.button:active{
+    padding-left: 2px;
+    box-shadow: inset 2px 2px rgba(0,0,0,0.50)
+}
+div.numberButton {
     background-color: rgb(123, 132, 149);
     color: rgb(225, 232, 242);
-    
 }
 .operatorButton {
     background-color: rgb(3, 82, 148);
+    color: rgb(225, 232, 242)
+}
+div.emptyButton{
+    user-select: none;
+    box-shadow: none;
+}
+div.functionButton{
+    background-color: rgb(20, 20, 20);
     color: rgb(225, 232, 242)
 }
