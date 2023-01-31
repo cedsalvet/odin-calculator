@@ -4,7 +4,7 @@ let ope = "";
 
 function buttonPressed(buttonValue){
     let calcDiv = document.querySelector("#calc");
-    if (calcDiv.textContent == "divide by 0 impossible :D") {
+    if (calcDiv.textContent == "divide by 0 impossible :p") {
         calcDiv.textContent = "";
         op1 = "";
         op2 = "";
@@ -23,23 +23,25 @@ function buttonPressed(buttonValue){
         } else if (ope != "" && op2 == "") {
             ope = ""
         } else {
-            let op1delete = op1.split('');
-            op1delete.pop()
-            op1 = op1delete.join('');
-        }
-    } else if (buttonValue == '+' || buttonValue == '-' || buttonValue == 'x' || buttonValue == '/' || buttonValue == "ENTER") {
-        if (ope == "") {
-            if(buttonValue != "ENTER") {
-                ope = buttonValue;
+            try{
+                let op1delete = op1.split('');
+                op1delete.pop()
+                op1 = op1delete.join('');
+            } catch {
+                op1 = "";
             }
         }
-        else {
-            op1 = Math.round(operate(ope, op1, op2)*1000)/1000;
+    } else if (buttonValue == '+' || buttonValue == '-' || buttonValue == 'x' || buttonValue == '/' || buttonValue == "ENTER") {
+        if (op1 != "" && op2 != "" && ope != "") {
+            result = operate(ope, op1, op2)
+            op1 =  result != "divide by 0 impossible :p" ? Math.round(result*1000)/1000 : result;
             op2 = "";
-            ope = "";
+            if (buttonValue != "ENTER") ope = buttonValue;
+            else ope = "";
+        } else if (op1 != "" && buttonValue != "ENTER") {
+            ope = buttonValue;
         }
     } else {
-        
         if (ope == "") op1 += buttonValue;
         else op2 +=buttonValue
     }
@@ -54,7 +56,7 @@ function operate(operator, a , b) {
 }
 
 function add(a, b) {
-    return parseInt(a) + parseInt(b);
+    return parseFloat(a) + parseFloat(b);
 }
 
 function subtract(a, b) {

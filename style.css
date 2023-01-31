@@ -25,23 +25,17 @@
         4px 2px 5px rgba(0,0,0,0.50);
 }
 #screen{
-    height: 140px;
+    height: 80px;
     margin-left: 20px;
     margin-right: 20px;
     background-color: rgb(161, 164, 167);
-    box-shadow: inset 5px 20px  rgb(66, 76, 88),
+    box-shadow: inset 5px 30px  rgb(66, 76, 88),
         inset -5px -5px  rgb(66, 76, 88),
-        inset 15px 30px rgb(123, 132, 149),
+        inset 15px 40px rgb(123, 132, 149),
         inset -15px -15px rgb(123, 132, 149);
-    padding: 75px 20px 20px 20px;
+    padding: 40px 20px 20px 20px;
 }
 #screen #calc{
-    font-family: monospace;
-    font-size: 15pt;
-    font-weight: bolder;
-    text-align: right;
-}
-#screen #result{
     font-family: monospace;
     font-size: 15pt;
     font-weight: bolder;
