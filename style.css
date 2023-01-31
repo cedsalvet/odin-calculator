@@ -19,19 +19,40 @@
 #calculator{
     width: 300px;
     border-radius: 10px;
+    background-color: rgb(66, 76, 88);
     box-shadow: 2px 2px rgba(0,0,0,0.50),
         2px 4px 4px rgba(0,0,0,0.25),
         4px 2px 5px rgba(0,0,0,0.50);
 }
 #screen{
     height: 140px;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background-color: rgb(66, 76, 88);
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(161, 164, 167);
+    box-shadow: inset 5px 20px  rgb(66, 76, 88),
+        inset -5px -5px  rgb(66, 76, 88),
+        inset 15px 30px rgb(123, 132, 149),
+        inset -15px -15px rgb(123, 132, 149);
+    padding: 75px 20px 20px 20px;
 }
+#screen #calc{
+    font-family: monospace;
+    font-size: 15pt;
+    font-weight: bolder;
+    text-align: right;
+}
+#screen #result{
+    font-family: monospace;
+    font-size: 15pt;
+    font-weight: bolder;
+    text-align: right;
+}
+
+
 #keyboard {
-    height: 200px;
+    height: 190px;
     padding: 20px;
+    padding-top: 10px;
     background-color: rgb(66, 76, 88);
     display: grid;
     grid-gap: 10px;
@@ -72,6 +93,14 @@ div.numberButton {
 div.emptyButton{
     user-select: none;
     box-shadow: none;
+}
+div.emptyButton:hover{
+    box-shadow: none;
+    cursor:auto;
+}
+div.emptyButton:active{
+    box-shadow: none;
+    cursor:auto;
 }
 div.functionButton{
     background-color: rgb(20, 20, 20);
