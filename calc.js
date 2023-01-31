@@ -42,8 +42,10 @@ function buttonPressed(buttonValue){
             ope = buttonValue;
         }
     } else {
-        if (ope == "") op1 += buttonValue;
-        else op2 +=buttonValue
+        if (ope == "") {
+            if (buttonValue == "." && !op1.includes(".") || buttonValue != ".") op1 += buttonValue;
+        }
+        else if (buttonValue == "." && !op2.includes(".") || buttonValue != ".") op2 +=buttonValue
     }
     calcDiv.textContent = op1 + ope + op2;
 }
