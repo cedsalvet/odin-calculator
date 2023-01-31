@@ -2,6 +2,38 @@ let op1 = "";
 let op2 = "";
 let ope = "";
 
+let body = document.querySelector("body");
+body.addEventListener("keydown", keyPress, false);
+
+function keyPress(e) {
+    var regDigit = new RegExp('^[0-9]$'); // to detect number only key
+
+    if (regDigit.test(e.key) || e.key == "+" || e.key == "-" || e.key == "/" || e.key == ".") {
+        buttonPressed(e.key);
+        e.preventDefault();
+    }
+    else if (e.key == ","){
+        buttonPressed(".");
+        e.preventDefault();
+    }
+    else if (e.key == "*"){
+        buttonPressed("x");
+        e.preventDefault();
+    }
+    else if (e.key == "Enter"){
+        buttonPressed("ENTER");
+        e.preventDefault();
+    }
+    else if (e.key == "Escape"){
+        buttonPressed("ON");
+        e.preventDefault();
+    }
+    else if (e.key == "Backspace"){
+        buttonPressed("DEL");
+        e.preventDefault();
+    }
+}
+
 function buttonPressed(buttonValue){
     let calcDiv = document.querySelector("#calc");
     if (calcDiv.textContent == "divide by 0 impossible :p") {
